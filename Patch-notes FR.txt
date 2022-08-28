@@ -1,0 +1,55 @@
+patch 0.0:
+
+- clicker sur une case définit sa couleur (verte ou rouge) en fonction de s'il y a une bombe ou non;
+- si il n'y a pas de bombe, on teste les 8 cases autour pour vérifier si elles ont une bombe, et on change leur couleurs.
+
+patch 0.1:
+
+- si la case est en rouge on ne peut pas découvrir les cases autours;
+- si la case est en déjà en vert on ne peut pas décourvrir les cases autours.
+
+patch 0.2:
+
+- ajout d'une fonction pour remplacer les ifs à l'infini pour vérifier les cases autour;
+- on ne fait la vérification que sur les cases adjacentes désormais.
+
+patch 0.3:
+
+- On verifie maintenant si les cases adjacentes sont hors de la liste, dans ce cas, on ne prend que les cases internes à la liste.
+
+patch 0.4:
+
+- chance de tomber sur une bombe réduites de 50%;
+- activebackground maintenant aussi changé;
+- création d'une fonction qui compte le nombre de bombes autour de la case.
+
+patch 0.8:
+
+- la taille du texte affichant le nombre de bombes autour de la case a été agrandi;
+- fonction de compteur de bombe terminé;
+- la recherche des cases redevient sur 8 cases au lieu de 4;
+- patch bugs de coordonnées;
+- patch bugs de découverte de cases.
+
+patch beta 1.0:
+
+- changement de style graphique (couleurs, texte);
+- ajout d'un menu de départ;
+- ajout d'une fonction gagner;
+- ajout d'une fonction d'affichage de toute les bombes;
+- ajout d'une fonction de démarrage de la partie;
+- ajout des scénarios de win et de lose de fin de partie.
+
+patch beta 2:
+
+- la recherche de cases sur les bordures hautes et basse à été patché;
+  (elles lisaient précédemment seulement les cases à gauche de la case sur laquelle on a cliqué)
+- Ajout de la récursivité de la recherche de cases: si une case à trouvé aucune bombes sur une de ses cases adjacentes, 
+  alors on lit alors les cases autours qui n'ont pas encore étés lu;
+- patch d'une erreur de fermeture de fenêtre en cas de défaite.
+
+
+patch beta 3.5:
+
+- ajout d'un bouton replay lorsque l'on gagne ou perd la partie;
+- le nombre de bombe était précedemment fixé à un pourcentage, on a maintenant strictement 25 bombes par partie.

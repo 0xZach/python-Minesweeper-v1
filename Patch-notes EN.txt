@@ -1,0 +1,54 @@
+patch 0.0:
+
+- Clicking on a tile defines it's colour (green or red) based on wether or not there is a bomb in it;
+- After looking for a bomb on the first tile, we apply the same test to the 8 tiles around it, and thus, we change their colour too.
+
+patch 0.1:
+
+- If the tile has a bomb, we don't test the tiles around it;
+- If the tile has already changed color, we don't test the tiles around it.
+
+patch 0.2:
+
+- Added a function to replace the tile tests;
+  (beforehand, there only was ifs based on the placement, now there is a loop)
+- The test only applies to the adjacent tiles now.
+
+patch 0.3:
+
+- The test now verifies if the tiles are off-bound, if so, we don't count them in.
+
+patch 0.4:
+
+- Probability of finding a bomb decreased by 50%;
+- The activebackground is now also changed when the test is complete;
+- Added a function that displays the number of bombs on each tiles around the one clicked when it is above 0.
+
+patch 0.8:
+
+- The size of the text displaying the number of bombs on the tile is now bigger;
+- The bomb counting function has been fixed;
+- The test now applies again to 8 tiles instead of the 4 adjactent ones;
+- coordonates bug patched;
+- tiles testing and discovering patched;
+
+patch beta 1.0:
+
+- Graphic style updated (coulours and text);
+- added a starting menu;
+- added a winning condition;
+- added a function that displays all bombs;
+- added a function that starts the game;
+- added winning and losing scenarios.
+
+patch beta 2.0:
+
+- tiles test and bomb counting on the tiles that are on the higher and lower border have been fixed;
+  (beforehand, only the tiles that were left to the tile clicked on where tested)
+- added recursive tiles test: if one of the tiles found doesn't have bombs around we do the test again on it;
+- patched a bug that didn't let the losing scenario take place correctly.
+
+patch beta 3.5:
+
+- added a replay button when winning or losing a game;
+- fixed the number of bombs per game, there is now 25 bombs in each game.
